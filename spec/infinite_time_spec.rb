@@ -24,6 +24,12 @@ describe InfiniteTime do
     (itime - 1).should eql itime
   end
 
+  it "cannot be compared against anything but Time objects" do
+    expect { InfiniteTime.new <=> Object.new }.to raise_error TypeError
+    expect { InfiniteTime.new <=> Date.new }.to raise_error TypeError
+    expect { InfiniteTime.new <=> 321 }.to raise_error TypeError
+  end
+
   describe "a positively infinite time" do
     it "is created by passing :+ to #new" do
       itime = InfiniteTime.new :+
