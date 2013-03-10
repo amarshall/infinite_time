@@ -26,7 +26,7 @@ class InfiniteTime < Time
       else
         0
       end
-    when Time then (@sign == :+) ? 1 : -1
+    when Time then (positive?) ? 1 : -1
     else raise TypeError
     end
   end
