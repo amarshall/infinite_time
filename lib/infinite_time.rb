@@ -34,9 +34,5 @@ class InfiniteTime < Time
   def + _; self; end
   def - _; self; end
 
-  protected
-
-  def sign; @sign; end
-
   class InvalidSign < StandardError; end
 end
