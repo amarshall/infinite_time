@@ -1,19 +1,14 @@
 require 'infinite_time'
+require 'infinite_time/time_extension'
 
 class Time
   Infinity = InfiniteTime
 
-  def infinite?
-    is_a? InfiniteTime
-  end
-
-  alias_method :_spaceship, :<=>
-  undef <=>
-  def <=> other
-    if other.infinite?
-      (other.positive?) ? -1 : 1
-    else
-      _spaceship other
-    end
+  if RUBY_VERSION.to_f >= 2.0
+    prepend InfiniteTime::TimeExtension
+  else
+    include InfiniteTime::TimeExtension
+    alias_method :_spaceship, :<=>
+    def <=> other; super; end
   end
 end
