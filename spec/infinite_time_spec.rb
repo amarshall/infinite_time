@@ -25,9 +25,9 @@ describe InfiniteTime do
   end
 
   it "cannot be compared against anything but Time objects" do
-    expect { InfiniteTime.new <=> Object.new }.to raise_error TypeError
-    expect { InfiniteTime.new <=> Date.new }.to raise_error TypeError
-    expect { InfiniteTime.new <=> 321 }.to raise_error TypeError
+    expect { InfiniteTime.new <=> Object.new }.to raise_error ArgumentError
+    expect { InfiniteTime.new <=> Date.new }.to raise_error ArgumentError
+    expect { InfiniteTime.new <=> 321 }.to raise_error ArgumentError
   end
 
   describe "a positively infinite time" do

@@ -27,7 +27,7 @@ class InfiniteTime < Time
         0
       end
     when Time then (positive?) ? 1 : -1
-    else raise TypeError, "comparison of InfiniteTime with #{other.inspect} failed"
+    else raise ArgumentError, "comparison of InfiniteTime with #{other.inspect} failed"
     end
   end
 
