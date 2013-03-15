@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['andrew@johnandrewmarshall.com']
   spec.description   = %q{Provides a representation of a (positively or negatively) infinite time.}
   spec.summary       = %q{Provides a representation of a (positively or negatively) infinite time.}
-  spec.homepage      = ''
+  spec.homepage      = 'http://johnandrewmarshall.com/projects/infinite_time'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
