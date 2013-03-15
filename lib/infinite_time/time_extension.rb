@@ -10,7 +10,7 @@ class InfiniteTime
       if other.infinite?
         (other.positive?) ? -1 : 1
       else
-        RUBY_VERSION.to_f >= 2.0 ? super : _spaceship(other)
+        super
       end
     end
   end
