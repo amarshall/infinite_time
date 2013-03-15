@@ -1,5 +1,3 @@
-require 'infinite_time'
-
 class InfiniteTime
   module TimeExtension
     def infinite?
