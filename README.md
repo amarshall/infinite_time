@@ -21,6 +21,13 @@ negative = InfiniteTime.new :-
 positive == InfiniteTime.new  #=> true
 ```
 
+`Time` has also been extended to be comparable with an `InfiniteTime`, as well as provides the `infinite?` method:
+
+```ruby
+Time.new.infinite?          #=> false
+InfiniteTime.new.infinite?  #=> true
+```
+
 Feel free to read the specs for more details.
 
 ## Contributing

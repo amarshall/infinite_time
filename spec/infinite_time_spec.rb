@@ -5,6 +5,10 @@ describe InfiniteTime do
     InfiniteTime.new.is_a?(Time).should == true
   end
 
+  it "is infinite" do
+    InfiniteTime.new.infinite?.should == true
+  end
+
   it "is positively infinite by default" do
     itime = InfiniteTime.new
     itime.positive?.should == true
