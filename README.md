@@ -1,6 +1,7 @@
 # InfiniteTime
 
 [![Build Status](https://secure.travis-ci.org/amarshall/infinite_time.png?branch=master)](http://travis-ci.org/amarshall/infinite_time)
+[![Code Climate rating](https://codeclimate.com/github/amarshall/infinite_time.png)](https://codeclimate.com/github/amarshall/infinite_time)
 
 Provides a representation of a (positively or negatively) infinite time. This allows easier comparison with times when, for instance, you have an end date for an object but it is not yet known. Using `nil` would cause TypeErrors everywhere and you must then guard against that, this avoids that issue.
 
