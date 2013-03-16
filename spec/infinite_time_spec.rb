@@ -114,7 +114,7 @@ describe InfiniteTime do
       negative.month.should   == -Float::INFINITY
       negative.mon.should     == -Float::INFINITY
       negative.day.should     == -Float::INFINITY
-      negative.yday.should     == -Float::INFINITY
+      negative.yday.should    == -Float::INFINITY
       negative.mday.should    == -Float::INFINITY
       negative.wday.should    == -Float::INFINITY
       negative.hour.should    == -Float::INFINITY
