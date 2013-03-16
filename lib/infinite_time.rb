@@ -50,6 +50,10 @@ class InfiniteTime < Time
     self.class.hash ^ @sign.hash
   end
 
+  def to_f
+    (positive?) ? Float::INFINITY : -Float::INFINITY
+  end
+
   def to_i; raise TypeError, 'InfiniteTime has no Integer representation'; end
   def to_r; raise TypeError, 'InfiniteTime has no Rational representation'; end
 
@@ -61,12 +65,6 @@ class InfiniteTime < Time
   alias_method :inspect, :to_s
 
   def strftime _; to_s; end
-
-  private
-
-  def signed_float
-    (positive?) ? Float::INFINITY : -Float::INFINITY
-  end
 
   class InvalidSign < StandardError; end
 end

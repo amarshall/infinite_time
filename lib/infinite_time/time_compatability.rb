@@ -17,7 +17,7 @@ class InfiniteTime < Time
     end
 
     def self.signed_method name, arity = 0
-      define_method(name, arity) { signed_float }
+      define_method(name, arity) { to_f }
     end
     def self.signed_methods names
       names.each { |name| signed_method name }

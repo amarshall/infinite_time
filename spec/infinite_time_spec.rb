@@ -128,6 +128,14 @@ describe InfiniteTime do
       negative.tv_usec.should == -Float::INFINITY
     end
 
+    it "returns the appropriate infinity for to_f" do
+      positive = InfiniteTime.new :+
+      negative = InfiniteTime.new :-
+
+      positive.to_f.should == Float::INFINITY
+      negative.to_f.should == -Float::INFINITY
+    end
+
     it "returns a TypeError for impossible numeric conversions" do
       itime = InfiniteTime.new
 
