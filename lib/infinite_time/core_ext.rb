@@ -1,3 +1,4 @@
+require 'infinite_time'
 require 'infinite_time/time_extension'
 
 class Time
